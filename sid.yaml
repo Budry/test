@@ -3,9 +3,13 @@ containers:
     image: budry/test
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      - $_JOB_DIRECTORY_$:/var/lib/app
+    workdir:
+      - /var/lib/app
 
 jobs:
   job-name:
     container: default-container
     commands: 
+      - pwd
       - docker run hello-world
