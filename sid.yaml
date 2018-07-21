@@ -1,0 +1,11 @@
+containers:
+  default-container:
+    image: budry/test
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+jobs:
+  job-name:
+    container: default-container
+    commands: 
+      - docker run hello-world
