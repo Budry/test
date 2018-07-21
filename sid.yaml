@@ -4,8 +4,7 @@ containers:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - $_JOB_DIRECTORY_$:/var/lib/app
-    workdir:
-      - /var/lib/app
+    workdir: /var/lib/app
 
 jobs:
   job-name:
